@@ -1,0 +1,106 @@
+.dashboard-container {
+    padding: 24px;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.dashboard-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.card-scroll {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 0px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+/* Scrollbar WebKit */
+.card-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.card-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.card-scroll::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.dashboard-card {
+    flex: 1 1 0;
+    margin: 7px 0px 7px 0px;
+    min-width: 180px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    scroll-snap-align: start;
+    border-radius: 24px;
+    /* más redondeado */
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    cursor: default;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.card-content {
+    padding: 0;
+}
+
+.card-content .MuiTypography-subtitle2 {
+    font-size: .9rem;
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+}
+
+.card-content .MuiTypography-h6 {
+    font-size: 1.3rem;
+    /* más grande */
+    font-weight: 700;
+    color: #222;
+    display: flex;
+    justify-content: center;
+}
+
+.graficas-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.grafica-box {
+  width: 50%;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .graficas-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .grafica-box {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
